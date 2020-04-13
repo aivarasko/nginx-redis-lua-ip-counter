@@ -1,12 +1,12 @@
-Role Name
+Nginx Redis LUA IP Counter
 =========
 
-A brief description of the role goes here.
+Nginx Redis LUA IP Counter, to track number of IP hits.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Ubuntu 18.04 LTS on EC2
 
 Role Variables
 --------------
@@ -25,7 +25,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: aivarasko.nginx-redis-lua-ip-counter, x: 42 }
 
 License
 -------
@@ -35,4 +35,4 @@ BSD
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+github aivarasko
