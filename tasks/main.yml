@@ -14,3 +14,13 @@
     mode: '0644'
   become: yes
   notify: Reload Nginx
+
+- name: Update default nginx config
+  copy:
+    src: files/default
+    dest: /etc/nginx/sites-available/default
+    owner: root
+    group: root
+    mode: '0644'
+  become: yes
+  notify: Reload Nginx
