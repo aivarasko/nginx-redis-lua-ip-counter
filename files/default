@@ -28,6 +28,7 @@ server {
                     ngx.log(ngx.WARN, "failed to inrc redis key: ", err)
                 end
 
+                ngx.header.content_type = nil
                 ngx.say("Logged times ", key, " ", times)
 
                 return ngx.exit(200)
