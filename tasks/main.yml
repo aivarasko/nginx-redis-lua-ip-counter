@@ -1,2 +1,6 @@
 ---
-# tasks file for nginx-redis-lua
+- name: Install Nginx Redis Lua Packages
+  apt: name={{ item }} update_cache=yes state=latest
+  loop: [ 'lua-nginx-redis', 'redis-server', 'redis-tools' ]
+  become: yes
+  notify: Reload Nginx

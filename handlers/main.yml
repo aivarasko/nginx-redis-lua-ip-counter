@@ -1,2 +1,17 @@
 ---
-# handlers file for nginx-redis-lua
+- name: "Reload Nginx"
+  service:
+    name: nginx
+    state: reloaded
+
+- name: "Start Nginx"
+  service:
+    name: redis
+    state: started
+    enabled: yes
+
+- name: "Start Redis"
+  service:
+    name: redis
+    state: started
+    enabled: yes
