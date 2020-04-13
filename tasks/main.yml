@@ -4,3 +4,13 @@
   loop: [ 'lua-nginx-redis', 'redis-server', 'redis-tools' ]
   become: yes
   notify: Reload Nginx
+
+- name: Copy Lua Nginx configuration
+  copy:
+    src: files/lua.conf
+    dest: /etc/nginx/conf.d/lua.conf
+    owner: root
+    group: root
+    mode: '0644'
+  become: yes
+  notify: Reload Nginx
